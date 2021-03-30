@@ -7,63 +7,93 @@
 
 $main-color: #118ab2;
 
+html{
+    scroll-behavior: smooth;
+}
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     position: relative;
-    overflow-x: hidden;
-    .header{
-        width: 80vw;
-        height: 20vh;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &__logo{
-            width: 80px;
-        }
-        &__contact{
-            color: black;
-            text-decoration: none;
-        }
+    overflow: hidden;
+}
+.header{
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+        width: 80px;
     }
-    .main{
-        width: 100vw;
-        height: 60vh;
-        display: flex;
-        justify-content: space-around;
-        &__text{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        &__title{
-            font-size: 60px;
-        }
-        &__under-title{
-            font-size: 20px;
-        }
-        &__button{
-            width: 30%;
-            margin-top: 2em;
-            padding: 0.5em 0em;
-            font-size: 20px;
-            color: white;
-            background-color: $main-color;
-            border: none;
-            cursor: pointer;
-        }
+    &__contact{
+        color: black;
+        text-decoration: none;
     }
-    .bg-dots{
-        position: absolute;
-        z-index: -1;
-        &--1{
-            top: -100px;
-            right: -150px;
-        }
-        &--2{
-            top: 750px;
-            left: -10px;
+}
+.main{
+    width: 80vw;
+    height: 60vh;
+    margin: auto;
+    margin-bottom: 20vh;
+    display: flex;
+    justify-content: space-between;
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title{
+        font-size: 60px;
+    }
+    &__under-title{
+        font-size: 20px;
+    }
+    &__button{
+        width: 30%;
+        margin-top: 2em;
+        padding: 0.5em 0em;
+        font-size: 20px;
+        color: white;
+        background-color: $main-color;
+        border: none;
+        cursor: pointer;
+    }
+}
+.bg-dots{
+    position: absolute;
+    z-index: -1;
+    &--1{
+        top: -100px;
+        right: -150px;
+    }
+    &--2{
+        width: 70%;
+        top: 750px;
+        left: -400px;
+    }
+}
+.footer{
+    width: 80vw;
+    height: 20vh;
+    margin: auto;
+    margin-bottom: 4em;
+    &__title{
+        font-size: 40px;
+        margin-bottom: 4em;
+    }
+    &__links{
+        display: flex;
+        font-size: 20px;
+    }
+    &__href{
+        color: black;
+        text-decoration: none;
+        margin: 0px 5px;
+        &--links{
+            border-bottom: solid 1px $main-color;
+            &:hover{
+                font-weight: bold;
+            }
         }
     }
 }
