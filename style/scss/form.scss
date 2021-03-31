@@ -21,17 +21,49 @@ $main-color: #118ab2;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-bottom: 5%;
     &__line{
-        width: 100%;
+        width: 90%;
+        margin-left: 5%;
         height: 20%;
         position: absolute;
-        background-color: grey;
+        background-color: rgb(192, 189, 189);
         z-index: -2;
+        border-radius: 5px;
+        &--cover{
+            width: 25%;
+            z-index: -1;
+            background-color: $main-color;
+            left: 0;
+        }
+    }
+    &__dots{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: rgb(192, 189, 189);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &--1{
+            background-color: $main-color;
+        }
+    }
+    &__icons{
+        pointer-events: none;
+        &--1{
+            color: white;
+        }
     }
 }
 .form{
     width: 30%;
     &__label{
         display: flex;
+        margin-bottom: 5%;
+    }
+    &__input{
+        margin-left: 5%;
     }
 }
