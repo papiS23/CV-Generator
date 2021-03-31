@@ -4,4 +4,75 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.progress-container__line {
+  width: 90%;
+  margin-left: 5%;
+  height: 20%;
+  position: absolute;
+  background-color: #c0bdbd;
+  z-index: -2;
+  border-radius: 5px;
+}
+
+.progress-container__line--cover {
+  width: 25%;
+  z-index: -1;
+  background-color: #118ab2;
+  left: 0;
+}
+
+.progress-container__dots {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #c0bdbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.progress-container__dots--1 {
+  background-color: #118ab2;
+}
+
+.progress-container__icons {
+  pointer-events: none;
+}
+
+.progress-container__icons--1 {
+  color: white;
+}
+
+.form {
+  width: 30%;
+}
+
+.form__label {
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.form__input {
+  margin-left: 5%;
+}
 /*# sourceMappingURL=form.css.map */
