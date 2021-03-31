@@ -1,3 +1,5 @@
+@import './components/dots';
+
 *{
     margin: 0;
     padding: 0;
@@ -59,19 +61,7 @@ html{
         cursor: pointer;
     }
 }
-.bg-dots{
-    position: absolute;
-    z-index: -1;
-    &--1{
-        top: -100px;
-        right: -150px;
-    }
-    &--2{
-        width: 70%;
-        top: 750px;
-        left: -400px;
-    }
-}
+
 .footer{
     width: 80vw;
     height: 20vh;

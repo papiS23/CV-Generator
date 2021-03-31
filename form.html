@@ -11,22 +11,26 @@
 </head>
 <body>
     <div class="container">
-        <div class="progress-container">
-            <div class="progress-container__line"></div>
-            <div class="progress-container__line progress-container__line--cover"></div>
-            <div class="progress-container__dots progress-container__dots--1"><i class="fas fa-user  progress-container__icons--1"></i></div>
-            <div class="progress-container__dots progress-container__dots--2"><i class="fas fa-file progress-container__icons progress-container__icons--2"></i></div>
-            <div class="progress-container__dots progress-container__dots--3"><i class="fas fa-pen progress-container__icons progress-container__icons--3"></i></div>
-        </div>
-        <form class="form">
-            <label for="#" class="form__label">Imię: <input type="text" class="form__input form__input--name"></label>
-            <label for="#" class="form__label">Nazwisko: <input type="text" class="form__input form__input--secname"></label>
-            <label for="#" class="form__label">Adres e-mail: <input type="email" class="form__input form__input--email"></label>
-            <label for="#" class="form__label">Numer telefonu: <input type="number" class="form__input form__input--number"></label>
-            <label for="#" class="form__label">Adres: <input type="text" class="form__input form__input--name"></label>
-            <label for="#" class="form__label">Kod pocztowy: <input type="number" class="form__input form__input--name"></label>
-            <label for="#" class="form__label">Miasto / miejscowość: <input type="text" class="form__input form__input--name"></label>
-        </form>
+            <div class="progress-container">
+                <div class="progress-container__line"></div>
+                <div class="progress-container__line progress-container__line--cover"></div>
+                <div class="progress-container__dots progress-container__dots--1"><i class="fas fa-user  progress-container__icons--1"></i></div>
+                <div class="progress-container__dots progress-container__dots--2"><i class="fas fa-file progress-container__icons progress-container__icons--2"></i></div>
+                <div class="progress-container__dots progress-container__dots--3"><i class="fas fa-pen progress-container__icons progress-container__icons--3"></i></div>
+            </div>
+            <form class="form">
+                <label for="#" class="form__label form__label--photo"><input type="file" class="form__input form__input--photo" placeholder="Zdjęcie"></label>
+                <label for="#" class="form__label form__label--name"><input type="text" class="form__input form__input--name" placeholder="Imię: "></label>
+                <label for="#" class="form__label form__label--secname"><input type="text" class="form__input form__input--secname" placeholder="Nazwisko:"></label>
+                <label for="#" class="form__label form__label--email"><input type="email" class="form__input form__input--email" placeholder="Adres e-mail:"></label>
+                <label for="#" class="form__label form__label--number"><input type="number" class="form__input form__input--number" placeholder="Numer telefonu:"></label>
+                <label for="#" class="form__label form__label--adress"><input type="text" class="form__input form__input--adress" placeholder="Adres:"></label>
+                <label for="#" class="form__label form__label--post"><input type="number" class="form__input form__input--post" placeholder="Kod pocztowy:"></label>
+                <label for="#" class="form__label form__label--city"><input type="text" class="form__input form__input--city" placeholder="Miasto / miejscowość:"></label>
+                <label for="#" class="form__label form__label--button"><input type="submit" class="form__input form__input--button"></label>
+            </form>
+            <img src="./imgs/bg_elipse.svg" alt="backgroung image" class="bg-dots bg-dots--1">
+            <img src="./imgs/bg_elipse.svg" alt="backgroung image" class="bg-dots bg-dots--2">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
 </body>
