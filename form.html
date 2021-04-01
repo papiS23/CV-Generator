@@ -12,15 +12,22 @@
 <body>
     <div class="container">
             <div class="progress-container">
-                <div class="progress-container__line"></div>
-                <div class="progress-container__line progress-container__line--cover"></div>
-                <div class="progress-container__dots progress-container__dots--1"><i class="fas fa-user  progress-container__icons--1"></i></div>
-                <div class="progress-container__dots progress-container__dots--2"><i class="fas fa-file progress-container__icons progress-container__icons--2"></i></div>
-                <div class="progress-container__dots progress-container__dots--3"><i class="fas fa-pen progress-container__icons progress-container__icons--3"></i></div>
+                <div class="progress-container__bar">
+                    <div class="progress-container__line"></div>
+                    <div class="progress-container__line progress-container__line--cover"></div>
+                    <div class="progress-container__dots progress-container__dots--1"><i class="fas fa-user  progress-container__icons--1"></i></div>
+                    <div class="progress-container__dots progress-container__dots--2"><i class="fas fa-file progress-container__icons progress-container__icons--2"></i></div>
+                    <div class="progress-container__dots progress-container__dots--3"><i class="fas fa-pen progress-container__icons progress-container__icons--3"></i></div>
+                </div>
+                <div class="progress-container__paragraphs">
+                    <p class="progress-container__text progress-container__text--1">Dane osobowe</p>
+                    <p class="progress-container__text progress-container__text--2">Doświadczenie</p>
+                    <p class="progress-container__text progress-container__text--3">Motyw</p>
+                </div>
             </div>
             <form class="form">
                 <label for="#" class="form__label form__label--photo"><input type="file" class="form__input form__input--photo" placeholder="Zdjęcie"></label>
-                <label for="#" class="form__label form__label--name"><input type="text" class="form__input form__input--name" placeholder="Imię: "></label>
+                <label for="#" class="form__label form__label--name"><input type="text" name="name" class="form__input form__input--name" placeholder="Imię: "></label>
                 <label for="#" class="form__label form__label--secname"><input type="text" class="form__input form__input--secname" placeholder="Nazwisko:"></label>
                 <label for="#" class="form__label form__label--email"><input type="email" class="form__input form__input--email" placeholder="Adres e-mail:"></label>
                 <label for="#" class="form__label form__label--number"><input type="number" class="form__input form__input--number" placeholder="Numer telefonu:"></label>
