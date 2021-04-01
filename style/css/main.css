@@ -1,3 +1,19 @@
+.bg-dots {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-dots--1 {
+  top: -100px;
+  right: -150px;
+}
+
+.bg-dots--2 {
+  width: 70%;
+  top: 750px;
+  left: -400px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -65,22 +81,6 @@ html {
   background-color: #118ab2;
   border: none;
   cursor: pointer;
-}
-
-.bg-dots {
-  position: absolute;
-  z-index: -1;
-}
-
-.bg-dots--1 {
-  top: -100px;
-  right: -150px;
-}
-
-.bg-dots--2 {
-  width: 70%;
-  top: 750px;
-  left: -400px;
 }
 
 .footer {

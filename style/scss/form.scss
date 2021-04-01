@@ -1,11 +1,16 @@
+@import './components/dots';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 $main-color: #118ab2;
+$form-bgc: #f3f3f3;
+$border-color: #9DA5B2;
 
 .container{
     width: 100vw;
@@ -15,6 +20,7 @@ $main-color: #118ab2;
     align-items: center;
     justify-content: center;
 }
+
 .progress-container{
     width: 30%;
     display: flex;
@@ -28,11 +34,11 @@ $main-color: #118ab2;
         height: 20%;
         position: absolute;
         background-color: rgb(192, 189, 189);
-        z-index: -2;
+        z-index: 1;
         border-radius: 5px;
         &--cover{
             width: 25%;
-            z-index: -1;
+            z-index: 2;
             background-color: $main-color;
             left: 0;
         }
@@ -46,6 +52,7 @@ $main-color: #118ab2;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        z-index: 3;
         &--1{
             background-color: $main-color;
         }
@@ -58,12 +65,86 @@ $main-color: #118ab2;
     }
 }
 .form{
-    width: 30%;
+    width: 50%;
+    height: 50%;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: $form-bgc;
+    display: grid;
+    grid-template-columns: 30% repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "photo name name"
+    "photo secname secname"
+    "photo email email"
+    "adress city post"
+    "number button button"
+    ;
+    column-gap: 3%;
+
     &__label{
         display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 5%;
+        justify-self: center;
+        align-self: center;
+
+        &--photo{
+            grid-area: photo;
+        }
+        &--name{
+            grid-area: name;
+        }
+        &--secname{
+            grid-area: secname;
+        }
+        &--email{
+            grid-area: email;
+        }
+        &--number{
+            grid-area: number;
+        }
+        &--adress{
+            grid-area: adress;
+        }
+        &--post{
+            grid-area: post;
+        }
+        &--city{    
+            grid-area: city;
+        }
+        &--button{
+            grid-area: button;
+        }
     }
     &__input{
-        margin-left: 5%;
+        height: 100%;
+        border: none;
+        border-bottom: solid $border-color 1px;
+        background-color: transparent;
+        outline: none; 
+        font-size: 15px;
+
+        &--name, &--secname, &--email{
+            width: 100%;
+        }
+
+        &--adress, &--number{
+            width: 100%;
+        }
+
+        &--city, &--post{
+            width: 100%;
+        }
+
+        &--button{
+            font-size: 18px;
+            background-color: $main-color;
+            padding: 2% 5%;
+            color: $form-bgc;
+            border: none;
+        }
     }
 }

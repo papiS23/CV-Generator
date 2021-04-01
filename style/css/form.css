@@ -1,8 +1,25 @@
+.bg-dots {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-dots--1 {
+  top: -100px;
+  right: -150px;
+}
+
+.bg-dots--2 {
+  width: 70%;
+  top: 750px;
+  left: -400px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -29,13 +46,13 @@
   height: 20%;
   position: absolute;
   background-color: #c0bdbd;
-  z-index: -2;
+  z-index: 1;
   border-radius: 5px;
 }
 
 .progress-container__line--cover {
   width: 25%;
-  z-index: -1;
+  z-index: 2;
   background-color: #118ab2;
   left: 0;
 }
@@ -49,6 +66,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  z-index: 3;
 }
 
 .progress-container__dots--1 {
@@ -64,15 +82,90 @@
 }
 
 .form {
-  width: 30%;
+  width: 50%;
+  height: 50%;
+  padding: 5%;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  display: grid;
+  grid-template-columns: 30% repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "photo name name" "photo secname secname" "photo email email" "adress city post" "number button button";
+  column-gap: 3%;
 }
 
 .form__label {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5%;
+  justify-self: center;
+  align-self: center;
+}
+
+.form__label--photo {
+  grid-area: photo;
+}
+
+.form__label--name {
+  grid-area: name;
+}
+
+.form__label--secname {
+  grid-area: secname;
+}
+
+.form__label--email {
+  grid-area: email;
+}
+
+.form__label--number {
+  grid-area: number;
+}
+
+.form__label--adress {
+  grid-area: adress;
+}
+
+.form__label--post {
+  grid-area: post;
+}
+
+.form__label--city {
+  grid-area: city;
+}
+
+.form__label--button {
+  grid-area: button;
 }
 
 .form__input {
-  margin-left: 5%;
+  height: 100%;
+  border: none;
+  border-bottom: solid #9DA5B2 1px;
+  background-color: transparent;
+  outline: none;
+  font-size: 15px;
+}
+
+.form__input--name, .form__input--secname, .form__input--email {
+  width: 100%;
+}
+
+.form__input--adress, .form__input--number {
+  width: 100%;
+}
+
+.form__input--city, .form__input--post {
+  width: 100%;
+}
+
+.form__input--button {
+  font-size: 18px;
+  background-color: #118ab2;
+  padding: 2% 5%;
+  color: #f3f3f3;
+  border: none;
 }
 /*# sourceMappingURL=form.css.map */
