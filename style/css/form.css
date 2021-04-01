@@ -94,6 +94,16 @@
   column-gap: 3%;
 }
 
+.form__btn {
+  grid-area: photo;
+  background: #118ab2;
+  width: 60%;
+  height: 90%;
+  border: none;
+  outline: none;
+  justify-self: center;
+}
+
 .form__label {
   display: flex;
   width: 100%;
@@ -102,10 +112,6 @@
   margin-bottom: 5%;
   justify-self: center;
   align-self: center;
-}
-
-.form__label--photo {
-  grid-area: photo;
 }
 
 .form__label--name {

@@ -82,6 +82,16 @@ $border-color: #9DA5B2;
     ;
     column-gap: 3%;
 
+    &__btn{
+        grid-area: photo;
+        background: $main-color;
+        width: 60%;
+        height: 90%;
+        border: none;
+        outline: none;
+        justify-self: center;
+    }
+
     &__label{
         display: flex;
         width: 100%;
@@ -92,7 +102,7 @@ $border-color: #9DA5B2;
         align-self: center;
 
         &--photo{
-            grid-area: photo;
+            
         }
         &--name{
             grid-area: name;
@@ -146,5 +156,6 @@ $border-color: #9DA5B2;
             color: $form-bgc;
             border: none;
         }
+        
     }
 }
