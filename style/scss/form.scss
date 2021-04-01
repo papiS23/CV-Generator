@@ -11,6 +11,7 @@
 $main-color: #118ab2;
 $form-bgc: #f3f3f3;
 $border-color: #9DA5B2;
+$green-color: #61EDAA;
 
 .container{
     width: 100vw;
@@ -23,11 +24,34 @@ $border-color: #9DA5B2;
 
 .progress-container{
     width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+    &__bar{
+        width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 2%;
+    }
+    &__paragraphs{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text{
+        width: 33%;
+        &--1{
+            text-align: left;
+        }
+        &--2{
+            text-align: center;
+        }
+        &--3{
+            text-align: right;
+        }
+    }
     &__line{
         width: 90%;
         margin-left: 5%;
@@ -126,6 +150,9 @@ $border-color: #9DA5B2;
         background-color: transparent;
         outline: none; 
         font-size: 15px;
+        &:focus{
+            border-bottom: solid $green-color 1px;
+        }
 
         &--name, &--secname, &--email{
             width: 100%;
