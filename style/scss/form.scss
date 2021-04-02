@@ -106,6 +106,16 @@ $green-color: #61EDAA;
     ;
     column-gap: 3%;
 
+    &__btn{
+        grid-area: photo;
+        background: $main-color;
+        width: 60%;
+        height: 90%;
+        border: none;
+        outline: none;
+        justify-self: center;
+    }
+
     &__label{
         display: flex;
         width: 100%;
@@ -116,7 +126,7 @@ $green-color: #61EDAA;
         align-self: center;
 
         &--photo{
-            grid-area: photo;
+            
         }
         &--name{
             grid-area: name;
@@ -173,5 +183,6 @@ $green-color: #61EDAA;
             color: $form-bgc;
             border: none;
         }
+        
     }
 }
