@@ -33,11 +33,40 @@
 
 .progress-container {
   width: 30%;
+  margin-bottom: 2%;
+}
+
+.progress-container__bar {
+  width: 95%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
+}
+
+.progress-container__paragraphs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-container__text {
+  width: 33%;
+}
+
+.progress-container__text--1 {
+  text-align: left;
+}
+
+.progress-container__text--2 {
+  text-align: center;
+}
+
+.progress-container__text--3 {
+  text-align: right;
 }
 
 .progress-container__line {
@@ -153,6 +182,10 @@
   background-color: transparent;
   outline: none;
   font-size: 15px;
+}
+
+.form__input:focus {
+  border-bottom: solid #61EDAA 1px;
 }
 
 .form__input--name, .form__input--secname, .form__input--email {
