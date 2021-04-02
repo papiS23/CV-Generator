@@ -70,6 +70,9 @@ $green-color: #61EDAA;
         pointer-events: none;
         &--1{
             color: white;
+            &:hover{
+                color: black;
+            }
         }
     }
     &__paragraphs{

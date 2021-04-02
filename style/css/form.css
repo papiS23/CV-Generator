@@ -89,6 +89,10 @@
   color: white;
 }
 
+.progress-container__icons--1:hover {
+  color: black;
+}
+
 .progress-container__paragraphs {
   width: 100%;
   display: flex;
