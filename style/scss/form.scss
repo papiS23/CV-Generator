@@ -112,16 +112,6 @@ $green-color: #61EDAA;
     ;
     column-gap: 3%;
 
-    &__btn{
-        grid-area: photo;
-        background: $main-color;
-        width: 60%;
-        height: 90%;
-        border: none;
-        outline: none;
-        justify-self: center;
-    }
-
     &__label{
         display: flex;
         width: 100%;
@@ -131,9 +121,6 @@ $green-color: #61EDAA;
         justify-self: center;
         align-self: center;
 
-        &--photo{
-            
-        }
         &--name{
             grid-area: name;
         }
@@ -166,6 +153,7 @@ $green-color: #61EDAA;
         background-color: transparent;
         outline: none; 
         font-size: 15px;
+
         &:focus{
             border-bottom: solid $green-color 1px;
         }
@@ -190,5 +178,54 @@ $green-color: #61EDAA;
             border: none;
         }
         
+    }
+}
+
+.imageInput{
+    grid-area: photo;
+    width: 65%;
+    height: 100%;
+    position: relative;
+    background: transparent;
+    border: solid 1px $green-color;
+    display: flex;
+    flex-direction: column;
+
+    &__img{
+        width: auto;
+        height: 100%;
+        z-index: 10;
+    }
+
+    &__label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+
+        &:focus{
+            cursor: pointer;
+        }
+    }
+
+    &__input{
+        position: absolute;
+        width: 100%;
+        height: 95%;
+        color: transparent;
+        z-index: 20;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &::-webkit-file-upload-button{
+            display: none;
+        }
     }
 }
