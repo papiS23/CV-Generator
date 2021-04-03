@@ -179,6 +179,9 @@ $green-color: #61EDAA;
         }
         
     }
+    &--unactive{
+        display: none;
+    }
 }
 
 .imageInput{
@@ -227,5 +230,15 @@ $green-color: #61EDAA;
         &::-webkit-file-upload-button{
             display: none;
         }
+    }
+}
+.form2{
+    width: 50%;
+    height: 50%;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: $form-bgc;
+    &--unactive{
+        display: none;
     }
 }
