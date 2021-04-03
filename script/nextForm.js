@@ -5,6 +5,8 @@ const progressCover = document.querySelector(
 const progressDot2 = document.querySelector(".progress-container__dots--2");
 const progressIcon2 = document.querySelector(".progress-container__icons--2")
   .parentElement;
+const form1 = document.querySelector(".form");
+const form2 = document.querySelector(".form2");
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,5 +23,7 @@ submitBtn.addEventListener("click", (e) => {
   formInputs.forEach((input) => {
     formValues.push(input.value);
   });
-  console.log(formValues);
+  //FORM SWITCH
+  form1.classList.add("form--unactive");
+  form2.classList.remove("form2--unactive");
 });
