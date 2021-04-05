@@ -24,7 +24,7 @@
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@
 
 .progress-container {
   width: 30%;
-  margin-bottom: 2%;
+  margin: 5% 0 2% 0;
 }
 
 .progress-container__bar {
@@ -122,7 +122,7 @@
   padding: 5%;
   border-radius: 10px;
   background-color: #f3f3f3;
-  display: grid;
+  display: none;
   grid-template-columns: 30% repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "photo name name" "photo secname secname" "photo email email" "adress city post" "number button button";
@@ -251,5 +251,121 @@
 
 .imageInput__input::-webkit-file-upload-button {
   display: none;
+}
+
+.experience {
+  width: 40%;
+}
+
+.experience__container {
+  width: 100%;
+  background-color: #f3f3f3;
+  padding: 5% 0 5% 0;
+  margin: 5% 0 5% 0;
+  border-radius: 10px;
+}
+
+.experience__form {
+  width: 100%;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "title title" "profession city" "company company" "start end" "button button";
+  row-gap: 5%;
+}
+
+.experience__form--language {
+  height: 20vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "title title" "profession select" "button button";
+}
+
+.experience__form--hobby {
+  height: 20vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "title title" "hobby hobby" "button button";
+}
+
+.experience__title {
+  grid-area: title;
+  padding: 0 5% 0 5%;
+}
+
+.experience__label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10% 0 10%;
+  font-size: 18px;
+}
+
+.experience__label--profession {
+  grid-area: profession;
+}
+
+.experience__label--city {
+  grid-area: city;
+}
+
+.experience__label--company {
+  grid-area: company;
+  padding: 0 5% 0 5%;
+}
+
+.experience__label--start {
+  grid-area: start;
+}
+
+.experience__label--end {
+  grid-area: end;
+}
+
+.experience__label--select {
+  grid-area: select;
+}
+
+.experience__label--hobby {
+  grid-area: hobby;
+  padding: 0 5% 0 5%;
+}
+
+.experience__input {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #9DA5B2;
+  background-color: transparent;
+  outline: none;
+  font: 18px;
+}
+
+.experience__input--button {
+  grid-area: button;
+  width: 20%;
+  height: 70%;
+  justify-self: center;
+  align-self: center;
+  background-color: #118ab2;
+  border: none;
+  color: #f3f3f3;
+}
+
+.element {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% 5% 5% 5%;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: #61EDAA;
+}
+
+.element__button {
+  border: solid 1px #9DA5B2;
+  background-color: red;
+  padding: .5% 1.5%;
+  color: white;
+  outline: none;
 }
 /*# sourceMappingURL=form.css.map */
