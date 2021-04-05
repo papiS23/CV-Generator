@@ -28,12 +28,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .progress-container {
   width: 30%;
-  margin: 5% 0 2% 0;
+  margin: 10% 0 2% 0;
 }
 
 .progress-container__bar {
@@ -118,14 +117,10 @@
   padding: 5%;
   border-radius: 10px;
   background-color: #f3f3f3;
-  display: none;
+  display: grid;
   grid-template-columns: 30% repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: "photo name name"
- "photo secname secname"
- "photo email email"
- "adress city post"
- "number button button";
+  grid-template-areas: "photo name name" "photo secname secname" "photo email email" "adress city post" "number button button";
   column-gap: 3%;
 }
 
@@ -261,6 +256,10 @@
   width: 40%;
 }
 
+.experience--unactive {
+  display: none;
+}
+
 .experience__container {
   width: 100%;
   background-color: #f3f3f3;
@@ -275,28 +274,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: "title title"
- "profession city"
- "company company"
- "start end"
- "button button";
+  grid-template-areas: "title title" "profession city" "company company" "start end" "button button";
   row-gap: 5%;
 }
 
 .experience__form--language {
   height: 20vh;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "title title"
- "profession select"
- "button button";
+  grid-template-areas: "title title" "profession select" "button button";
 }
 
 .experience__form--hobby {
   height: 20vh;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "title title"
- "hobby hobby"
- "button button";
+  grid-template-areas: "title title" "hobby hobby" "button button";
 }
 
 .experience__title {
@@ -379,7 +370,8 @@
   padding: .5% 1.5%;
   color: white;
   outline: none;
-  
+}
+
 .form2 {
   width: 50%;
   height: 50%;
