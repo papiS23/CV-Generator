@@ -71,9 +71,6 @@ $green-color: #61EDAA;
         pointer-events: none;
         &--1{
             color: white;
-            &:hover{
-                color: black;
-            }
         }
     }
     &__paragraphs{
@@ -180,6 +177,9 @@ $green-color: #61EDAA;
             border: none;
         }
         
+    }
+    &--unactive{
+        display: none;
     }
 }
 
@@ -359,5 +359,24 @@ $green-color: #61EDAA;
         padding: .5% 1.5%;
         color: white;
         outline: none;
+
+.form2{
+    width: 50%;
+    height: 50%;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: $form-bgc;
+    &--unactive{
+        display: none;
+    }
+}
+.form3{
+    width: 50%;
+    height: 50%;
+    padding: 5%;
+    border-radius: 10px;
+    background-color: $form-bgc;
+    &--unactive{
+        display: none;
     }
 }
