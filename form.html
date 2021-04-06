@@ -39,36 +39,38 @@
                 <label for="#" class="form__label form__label--city"><input type="text" class="form__input form__input--city" placeholder="Miasto / miejscowość:"></label>
                 <label for="#" class="form__label form__label--button"><input type="submit" class="form__input form__input--button"></label>
             </form>
+            <section class="experience">
+                <section class="experience__container experience__container--one">
             <section class="experience experience--unactive">
                 <section class="experience__container">
                     <form class="experience__form experience__form--profession">
                         <h2 class="experience__title">Doświadczenie zawodowe</h2>
-                        <label class="experience__label experience__label--profession">Zawód<input class="experience__input" type="text"></label>
-                        <label class="experience__label experience__label--city">Miasto<input class="experience__input" type="text"></label>
-                        <label class="experience__label experience__label--company">Firma<input class="experience__input" type="text"></label>
-                        <label class="experience__label experience__label--start">Data rozpoczęcia<input class="experience__input" type="date"></label>
-                        <label class="experience__label experience__label--end">Data zakończenia<input class="experience__input" type="date"></label>
+                        <label class="experience__label experience__label--profession">Zawód<input class="experience__input" type="text" id="profession"></label>
+                        <label class="experience__label experience__label--city">Miasto<input class="experience__input" type="text" id="city"></label>
+                        <label class="experience__label experience__label--company">Firma<input class="experience__input" type="text" id="company"></label>
+                        <label class="experience__label experience__label--start">Data rozpoczęcia<input class="experience__input" type="date" id="start"></label>
+                        <label class="experience__label experience__label--end">Data zakończenia<input class="experience__input" type="date" id="end"></label>
                         <input class="experience__input experience__input--button" type="submit" value="Dodaj">
                     </form>
                     <div class="element"><p class="element__text">Programista, Netguru - Katowice 12.11.2020-23.03.2021</p><button class="element__button">X</button></div>
                 </section>
-                <section class="experience__container">
+                <section class="experience__container experience__container--two">
                         <form class="experience__form experience__form--profession">
                             <h2 class="experience__title">Wykształcenie</h2>
-                            <label class="experience__label experience__label--profession">Stopień/Kierunek<input class="experience__input" type="text"></label>
-                            <label class="experience__label experience__label--city">Miasto<input class="experience__input" type="text"></label>
-                            <label class="experience__label experience__label--company">Szkoła/Uczelnia<input class="experience__input" type="text"></label>
-                            <label class="experience__label experience__label--start">Data rozpoczęcia<input class="experience__input" type="date"></label>
-                            <label class="experience__label experience__label--end">Data zakończenia<input class="experience__input" type="date"></label>
+                            <label class="experience__label experience__label--profession">Stopień/Kierunek<input class="experience__input" type="text" id="profession"></label>
+                            <label class="experience__label experience__label--city">Miasto<input class="experience__input" type="text" id="city"></label>
+                            <label class="experience__label experience__label--company">Szkoła/Uczelnia<input class="experience__input" type="text" id="company"></label>
+                            <label class="experience__label experience__label--start">Data rozpoczęcia<input class="experience__input" type="date" id="start"></label>
+                            <label class="experience__label experience__label--end">Data zakończenia<input class="experience__input" type="date" id="end"></label>
                             <input class="experience__input experience__input--button" type="submit" value="Dodaj">
                         </form>
                         <div class="element"><p class="element__text">Magister Informatyki, AGH - Kraków 12.11.2020-23.03.2021</p><button class="element__button">X</button></div>
                 </section>
-                <section class="experience__container">
+                <section class="experience__container experience__container--three">
                     <form class="experience__form experience__form--language">
                         <h2 class="experience__title">Języki</h2>
-                            <label class="experience__label experience__label--profession">Język<input class="experience__input" type="text"></label>
-                            <label class="experience__label experience__label--select">Poziom<select class="experience__input experience__input--select">
+                            <label class="experience__label experience__label--profession">Język<input class="experience__input" type="text" id="profession"></label>
+                            <label class="experience__label experience__label--select">Poziom<select class="experience__input experience__input--select" id="select" value="">
                                 <option>Ojczysty</option>
                                 <option>A1</option>
                                 <option>A2</option>
@@ -76,17 +78,17 @@
                                 <option>B2</option>
                                 <option>C1</option>
                                 <option>C2</option>
+                                <option selected></option>
                             </select></label>
-                            
                             <input class="experience__input experience__input--button" type="submit" value="+ Dodaj +">
                     </form>
                     <div class="element"><p class="element__text">Polski, ojczysty</p><button class="element__button">X</button></div>
                 </section>
-                <section class="experience__container">
+                <section class="experience__container experience__container--four">
                     <form class="experience__form experience__form--language">
                         <h2 class="experience__title">Umiejętności</h2>
-                            <label class="experience__label experience__label--profession">Umiejętność<input class="experience__input" type="text"></label>
-                            <label class="experience__label experience__label--select">Poziom<select class="experience__input experience__input--select">
+                            <label class="experience__label experience__label--profession">Umiejętność<input class="experience__input" type="text" id="profession"></label>
+                            <label class="experience__label experience__label--select">Poziom<select class="experience__input experience__input--select" id="select" value="">
                                 <option>Początkujący</option>
                                 <option>Zaawansowany</option>
                                 <option>Doświadczony</option>
@@ -97,10 +99,10 @@
                     </form>
                     <div class="element"><p class="element__text">Obsługa exel, Zaawansowany</p><button class="element__button">X</button></div>
                 </section>
-                <section class="experience__container">
+                <section class="experience__container experience__container--five">
                     <form class="experience__form experience__form--hobby">
                         <h2 class="experience__title">Hobby i zainteresowania </h2>
-                        <label class="experience__label experience__label--hobby">Hobby<input class="experience__input" type="text"></label>
+                        <label class="experience__label experience__label--hobby">Hobby<input class="experience__input" type="text" id="profession"></label>
                         <input class="experience__input experience__input--button" type="submit" value="Dodaj">
                     </form>
                     <div class="element"><p class="element__text">Obsługa exel, Zaawansowany</p><button class="element__button">X</button></div>
@@ -114,5 +116,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
     <script src="./script/addPhoto.js"></script>
     <script src="./script/nextForm.js"></script>
+    <script src="./script/addElement.js"></script>
 </body>
 </html>
