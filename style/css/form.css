@@ -121,11 +121,7 @@
   display: none;
   grid-template-columns: 30% repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: "photo name name"
- "photo secname secname"
- "photo email email"
- "adress city post"
- "number button button";
+  grid-template-areas: "photo name name" "photo secname secname" "photo email email" "adress city post" "number button button";
   column-gap: 3%;
 }
 
@@ -275,28 +271,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: "title title"
- "profession city"
- "company company"
- "start end"
- "button button";
+  grid-template-areas: "title title" "profession city" "company company" "start end" "button button";
   row-gap: 5%;
 }
 
 .experience__form--language {
   height: 20vh;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "title title"
- "profession select"
- "button button";
+  grid-template-areas: "title title" "profession select" "button button";
 }
 
 .experience__form--hobby {
   height: 20vh;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "title title"
- "hobby hobby"
- "button button";
+  grid-template-areas: "title title" "hobby hobby" "button button";
 }
 
 .experience__title {
@@ -379,8 +367,9 @@
   padding: .5% 1.5%;
   color: white;
   outline: none;
-  
-.form2 {
+}
+
+.element__button .form2 {
   width: 50%;
   height: 50%;
   padding: 5%;
@@ -388,11 +377,11 @@
   background-color: #f3f3f3;
 }
 
-.form2--unactive {
+.element__button .form2--unactive {
   display: none;
 }
 
-.form3 {
+.element__button .form3 {
   width: 50%;
   height: 50%;
   padding: 5%;
@@ -400,7 +389,7 @@
   background-color: #f3f3f3;
 }
 
-.form3--unactive {
+.element__button .form3--unactive {
   display: none;
 }
 /*# sourceMappingURL=form.css.map */
