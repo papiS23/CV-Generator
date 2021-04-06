@@ -9,7 +9,7 @@ const progressDot3 = document.querySelector(".progress-container__dots--3");
 const progressIcon3 = document.querySelector(".progress-container__icons--3")
   .parentElement;
 const form1 = document.querySelector(".form");
-const form2 = document.querySelector(".form2");
+const form2 = document.querySelector(".experience");
 const form3 = document.querySelector(".form3");
 const progressDots = document.querySelectorAll(".progress-container__dots");
 
@@ -30,7 +30,7 @@ submitBtn1.addEventListener("click", (e) => {
   });
   //FORM SWITCH
   form1.classList.add("form--unactive");
-  form2.classList.remove("form2--unactive");
+  form2.classList.remove("experience--unactive");
 });
 
 progressDots.forEach((dot) => {
@@ -40,7 +40,7 @@ progressDots.forEach((dot) => {
 function barChange() {
   if (this.classList.contains("progress-container__dots--1")) {
     form1.classList.remove("form--unactive");
-    form2.classList.add("form2--unactive");
+    form2.classList.add("experience--unactive");
     form3.classList.add("form3--unactive");
 
     progressCover.style.width = "25%";
@@ -61,7 +61,7 @@ function barChange() {
     });
   } else if (this.classList.contains("progress-container__dots--2")) {
     form1.classList.add("form--unactive");
-    form2.classList.remove("form2--unactive");
+    form2.classList.remove("experience--unactive");
     form3.classList.add("form3--unactive");
 
     progressCover.style.width = "45%";
@@ -79,7 +79,7 @@ function barChange() {
     });
   } else if (this.classList.contains("progress-container__dots--3")) {
     form1.classList.add("form--unactive");
-    form2.classList.add("form2--unactive");
+    form2.classList.add("experience--unactive");
     form3.classList.remove("form3--unactive");
 
     progressCover.style.width = "95%";

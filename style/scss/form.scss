@@ -19,13 +19,10 @@ $green-color: #61EDAA;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-
 .progress-container{
     width: 30%;
-    margin: 5% 0 2% 0;
-
+    margin: 10% 0 2% 0;
     &__bar{
         width: 95%;
         margin: auto;
@@ -99,7 +96,7 @@ $green-color: #61EDAA;
     padding: 5%;
     border-radius: 10px;
     background-color: $form-bgc;
-    display: none;
+    display: grid;
     grid-template-columns: 30% repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
@@ -234,7 +231,9 @@ $green-color: #61EDAA;
 
 .experience{
     width: 40%;
-
+    &--unactive{
+        display: none;
+    }
     &__container{
         width: 100%;
         background-color: $form-bgc;
@@ -359,7 +358,8 @@ $green-color: #61EDAA;
         padding: .5% 1.5%;
         color: white;
         outline: none;
-
+    }
+}
 .form2{
     width: 50%;
     height: 50%;
