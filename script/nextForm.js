@@ -1,4 +1,5 @@
 const submitBtn1 = document.querySelector(".form__input--button");
+const submitBtn2 = document.querySelector(".experience__submit");
 const progressCover = document.querySelector(
   ".progress-container__line--cover"
 );
@@ -23,15 +24,56 @@ submitBtn1.addEventListener("click", (e) => {
     iconColor.setAttribute("fill", "#ffffff");
   });
   //FORM 1 VALUES
-  const formInputs = document.querySelectorAll(".form__input");
-  const formValues = [];
-  formInputs.forEach((input) => {
-    formValues.push(input.value);
+  const formInputs1 = document.querySelectorAll(".form__input");
+  const formValues1 = [];
+  formInputs1.forEach((input) => {
+    formValues1.push(input.value);
   });
   //FORM SWITCH
   form1.classList.add("form--unactive");
   form2.classList.remove("experience--unactive");
 });
+
+submitBtn2.addEventListener("click", (e) => {
+  //PROGRESS BAR
+  progressCover.style.width = "95%";
+  progressDot3.style = "background-color: #0581aa";
+  iconColor3 = progressDot3.childNodes[0].childNodes[0];
+  iconColor3.setAttribute("fill", "#ffffff");
+  //BUG FIX
+  progressCover.addEventListener("transitionend", () => {
+    progressDot3.style = "background-color: #0581aa";
+    iconColor3 = progressIcon3.childNodes[0].childNodes[0];
+    iconColor3.setAttribute("fill", "#ffffff");
+  });
+  //FORM 2 VALUES
+  const jobs = document.querySelectorAll(".element__text--job");
+  jobsValues = [];
+  jobs.forEach((job) => {
+    jobsValues.push(job.innerText);
+  });
+  const school = document.querySelectorAll(".element__text--school");
+  schoolValues = [];
+  school.forEach((schoool) => {
+    schoolValues.push(schoool.innerText);
+  });
+  const langs = document.querySelectorAll(".element__text--lang");
+  langsValues = [];
+  langs.forEach((lang) => {
+    langsValues.push(lang.innerText);
+  });
+  const skills = document.querySelectorAll(".element__text--skill");
+  skillsValues = [];
+  skills.forEach((skill) => {
+    skillsValues.push(skill.innerText);
+  });
+  const hobbies = document.querySelectorAll(".element__text--hobby");
+  hobbiesValues = [];
+  hobbies.forEach((hobby) => {
+    hobbiesValues.push(hobby.innerText);
+  });
+});
+//SPRAWDZ CZY DZIAŁA!!!
 
 progressDots.forEach((dot) => {
   dot.addEventListener("click", barChange);
