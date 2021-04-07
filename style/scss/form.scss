@@ -19,6 +19,7 @@ $green-color: #61EDAA;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 .progress-container{
     width: 30%;
@@ -231,6 +232,9 @@ $green-color: #61EDAA;
 
 .experience{
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &--unactive{
         display: none;
     }
@@ -340,6 +344,14 @@ $green-color: #61EDAA;
             color: $form-bgc;
         }
     }
+    &__submit{
+        font-size: 18px;
+        background-color: $main-color;
+        padding: 2% 5%;
+        color: $form-bgc;
+        border: none;
+        margin-bottom: 5%;
+    }
 }
 
 .element{
@@ -358,16 +370,6 @@ $green-color: #61EDAA;
         padding: .5% 1.5%;
         color: white;
         outline: none;
-    }
-}
-.form2{
-    width: 50%;
-    height: 50%;
-    padding: 5%;
-    border-radius: 10px;
-    background-color: $form-bgc;
-    &--unactive{
-        display: none;
     }
 }
 .form3{

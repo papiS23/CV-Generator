@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .progress-container {
@@ -254,6 +255,9 @@
 
 .experience {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .experience--unactive {
@@ -353,6 +357,15 @@
   color: #f3f3f3;
 }
 
+.experience__submit {
+  font-size: 18px;
+  background-color: #118ab2;
+  padding: 2% 5%;
+  color: #f3f3f3;
+  border: none;
+  margin-bottom: 5%;
+}
+
 .element {
   width: 90%;
   display: flex;
@@ -370,18 +383,6 @@
   padding: .5% 1.5%;
   color: white;
   outline: none;
-}
-
-.form2 {
-  width: 50%;
-  height: 50%;
-  padding: 5%;
-  border-radius: 10px;
-  background-color: #f3f3f3;
-}
-
-.form2--unactive {
-  display: none;
 }
 
 .form3 {
