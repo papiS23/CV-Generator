@@ -17,12 +17,12 @@ for (let i = 0; i < addBtn.length; i++) {
 
 function createBar(i) {
   // stworzenie zmiennych
-  let professionValue;
-  let cityValue;
-  let companyValue;
-  let startValue;
-  let endValue;
-  let selectValue;
+  let professionValue = "";
+  let cityValue = "";
+  let companyValue = "";
+  let startValue = "";
+  let endValue = "";
+  let selectValue = "";
   // stworzenie tego zielonego paska w którym są wyświetlone informacje
   const element = document.createElement("div");
   element.classList.add("element");
@@ -54,7 +54,9 @@ function createBar(i) {
     text.classList.add("element__text--lang");
   } else if (i == 3) {
     professionValue = document.querySelector(`#profession${i}`).value;
-    selectValue = document.querySelector(`#select${i}`).value;
+    professionValue == ""
+      ? (selectValue = "")
+      : (selectValue = document.querySelector(`#select${i}`).value);
     text.classList.add("element__text--skill");
   } else if (i == 4) {
     professionValue = document.querySelector(`#profession${i}`).value;
@@ -63,20 +65,24 @@ function createBar(i) {
     console.log("Nie działa");
   }
   // wypisanie zawartości zmiennych do tekstu
-  text.innerText = `${professionValue == undefined ? "" : professionValue}, ${
-    companyValue == undefined ? "" : companyValue
-  } - ${cityValue == undefined ? "" : cityValue} ${
-    selectValue == undefined ? "" : selectValue
-  } ${startValue == undefined ? "" : startValue} ${
-    endValue == undefined ? "" : endValue
-  }`;
-  //dodanie text i delBtn do tego zielonego elementu
-  element.appendChild(text);
-  element.appendChild(delBtn);
-  // przyciks do usuwania
-  delBtn.addEventListener("click", function () {
-    element.remove();
-  });
-  //dodawanie tego zielonego paska do danej sekcji
-  containerOne[i].appendChild(element);
+  text.innerText = `${professionValue == "" ? "" : professionValue} ${
+    companyValue == "" ? "" : "," + companyValue
+  } ${cityValue == "" ? "" : "- " + cityValue} ${
+    selectValue == "" ? "" : "," + selectValue
+  } ${startValue == "" ? "" : startValue} ${endValue == "" ? "" : endValue}`;
+
+  if (text.innerText == "     ") {
+    console.log("puste");
+    //TODO: cos w stylu alerta ze nie zostalo nic wpisane
+  } else {
+    //dodanie text i delBtn do tego zielonego elementu
+    element.appendChild(text);
+    element.appendChild(delBtn);
+    // przyciks do usuwania
+    delBtn.addEventListener("click", function () {
+      element.remove();
+    });
+    //dodawanie tego zielonego paska do danej sekcji
+    containerOne[i].appendChild(element);
+  }
 }

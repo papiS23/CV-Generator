@@ -42,7 +42,7 @@ $green-color: #61EDAA;
         z-index: 1;
         border-radius: 5px;
         &--cover{
-            width: 25%;
+            width: 20%;
             z-index: 2;
             background-color: $main-color;
             left: 0;
@@ -62,6 +62,9 @@ $green-color: #61EDAA;
         transition: all .5s ease;
         &--1{
             background-color: #0581aa;
+        }
+        &--click-block{
+            pointer-events: none;
         }
     }
     &__icons{
@@ -172,6 +175,11 @@ $green-color: #61EDAA;
             padding: 2% 5%;
             color: $form-bgc;
             border: none;
+            transition: all .5s ease;
+            &--unactive{
+                pointer-events: none;
+                background-color: rgb(161, 156, 156);
+            }
         }
         
     }
