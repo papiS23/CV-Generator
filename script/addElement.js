@@ -72,8 +72,6 @@ function createBar(i) {
   } ${startValue == "" ? "" : startValue} ${endValue == "" ? "" : endValue}`;
 
   if (text.innerText == "     ") {
-    console.log("puste");
-    //TODO: cos w stylu alerta ze nie zostalo nic wpisane
   } else {
     //dodanie text i delBtn do tego zielonego elementu
     element.appendChild(text);
