@@ -396,13 +396,43 @@
 
 .form3 {
   width: 50%;
-  height: 50%;
-  padding: 5%;
+  height: 60vh;
   border-radius: 10px;
   background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form3__title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form3__container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .form3--unactive {
   display: none;
+}
+
+.form3__element {
+  width: 27%;
+  height: 75%;
+  border-radius: 10px;
+  display: block;
+  background-color: #118ab2;
+  padding: 2% 5%;
+}
+
+.form3__element--active {
+  border: #61EDAA 1px solid;
 }
 /*# sourceMappingURL=form.css.map */
