@@ -15,4 +15,8 @@ styleDivs.forEach((div) => {
 submitBtn2.addEventListener("click", () => {
   const pdfContainer = document.createElement("div");
   pdfContainer.classList.add("pdf-container");
+  console.log(jobsValues);
+  pdfContainer.appendChild(img);
 });
+
+
