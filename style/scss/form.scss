@@ -23,6 +23,9 @@ $green-color: #61EDAA;
 .progress-container{
     width: 30%;
     margin: 10% 0 2% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__bar{
         width: 95%;
         margin: auto;
