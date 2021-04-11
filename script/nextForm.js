@@ -15,12 +15,12 @@ const form3 = document.querySelector(".form3");
 const progressDots = document.querySelectorAll(".progress-container__dots");
 const form1Required = document.querySelectorAll(".form__input--required");
 //VALUES
-let formValues1 = [];
-let jobsValues = [];
-let schoolValues = [];
-let langsValues = [];
-let skillsValues = [];
-let hobbiesValues = [];
+let formValues1 = ['form1'];
+let jobsValues = ["job"];
+let schoolValues = ["school"];
+let langsValues = ["langs"];
+let skillsValues = ["skills"];
+let hobbiesValues = ["hobbies"];
 //sprawdzenie czy wymagane pola sa wypelnione
 form1Required.forEach((input) => {
   input.addEventListener("input", () => {
@@ -49,7 +49,7 @@ form1Required.forEach((input) => {
         formInputs1.forEach((input) => {
           formValues1.push(input.value);
         });
-        console.log(formValues1);
+        //console.log(formValues1);
         //FORM SWITCH
         form1.classList.add("form--unactive");
         form2.classList.remove("experience--unactive");
