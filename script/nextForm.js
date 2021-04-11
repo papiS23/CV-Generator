@@ -14,8 +14,9 @@ const form2 = document.querySelector(".experience");
 const form3 = document.querySelector(".form3");
 const progressDots = document.querySelectorAll(".progress-container__dots");
 const form1Required = document.querySelectorAll(".form__input--required");
+let formInputs1;
 //VALUES
-let formValues1 = ['form1'];
+let formValues1 = ["form1"];
 let jobsValues = ["job"];
 let schoolValues = ["school"];
 let langsValues = ["langs"];
@@ -44,7 +45,7 @@ form1Required.forEach((input) => {
           iconColor.setAttribute("fill", "#ffffff");
         });
         //FORM 1 VALUES
-        const formInputs1 = document.querySelectorAll(".form__input--values");
+        formInputs1 = document.querySelectorAll(".form__input--values");
         formValues1 = [];
         formInputs1.forEach((input) => {
           formValues1.push(input.value);
@@ -146,7 +147,7 @@ function barChange() {
     });
     //ponowne zapisanie wartosci z pierwszego forma
     formValues1 = [];
-    const formInputs1 = document.querySelectorAll(".form__input--values");
+    formInputs1 = document.querySelectorAll(".form__input--values");
     formInputs1.forEach((input) => {
       formValues1.push(input.value);
     });
@@ -171,7 +172,7 @@ function barChange() {
     //ponowne zapisanie wartosci z pierwszego i drugiego forma
     //1
     formValues1 = [];
-    const formInputs1 = document.querySelectorAll(".form__input--values");
+    formInputs1 = document.querySelectorAll(".form__input--values");
     formInputs1.forEach((input) => {
       formValues1.push(input.value);
     });
