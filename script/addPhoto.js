@@ -1,5 +1,6 @@
 const inputBtn = document.querySelector(".imageInput__input--photo");
 const img = document.querySelector(".imageInput__img");
+let reader = '';
 
 inputBtn.addEventListener("change", function () {
   const file = this.files[0]; //pobranie pliku
