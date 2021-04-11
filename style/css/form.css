@@ -438,4 +438,19 @@
 .form3__element--active {
   border: #61EDAA 1px solid;
 }
+
+.form3__submit {
+  width: 20%;
+  font-size: 18px;
+  background-color: #118ab2;
+  padding: 2% 5%;
+  color: #f3f3f3;
+  border: none;
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+
+.form3__submit:focus {
+  outline: none;
+}
 /*# sourceMappingURL=form.css.map */

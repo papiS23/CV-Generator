@@ -417,5 +417,18 @@ $green-color: #61EDAA;
             border: #61EDAA 1px solid;
         }
     }
+    &__submit{
+        width: 20%;
+        font-size: 18px;
+        background-color: $main-color;
+        padding: 2% 5%;
+        color: $form-bgc;
+        border: none;
+        margin-bottom: 5%;
+        overflow: hidden;
+        &:focus{
+            outline: none;
+        }
+    }
 
 }

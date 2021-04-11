@@ -1,4 +1,5 @@
 const styleDivs = document.querySelectorAll(".form3__element");
+const form3Btn = document.querySelector(".form3__submit");
 styleDivs.forEach((div) => {
   div.addEventListener("click", () => {
     if (div.classList.contains("form3__element--active")) {
@@ -11,38 +12,60 @@ styleDivs.forEach((div) => {
     }
   });
 });
-//głowna tablica z wszytskimi danymi 
-const dataArray = [formValues1, jobsValues, schoolValues, langsValues, skillsValues, hobbiesValues];
+//głowna tablica z wszytskimi danymi
+const dataArray = [
+  formValues1,
+  jobsValues,
+  schoolValues,
+  langsValues,
+  skillsValues,
+  hobbiesValues,
+];
 
-
-submitBtn2.addEventListener("click", () => {
+form3Btn.addEventListener("click", () => {
   const pdfContainer = document.createElement("div");
   pdfContainer.classList.add("pdf-container");
-  //console.log(dataArray[0]);
-  
-  dataArray.forEach(function(mainContentPDF){
-    const mainDiv = document.createElement('div');//dla każej struktury zrób div
+
+  form3Btn.innerText = "Pobieranie...";
+
+  styleDivs.forEach((style) => {
+    if (
+      style.classList.contains("form3__element--active") &&
+      style.classList.contains("form3__element--student")
+    ) {
+      pdfContainer.classList.add("pdf-container--student");
+    } else if (
+      style.classList.contains("form3__element--active") &&
+      style.classList.contains("form3__element--bussines")
+    ) {
+      pdfContainer.classList.add("pdf-container--bussines");
+    } else if (
+      style.classList.contains("form3__element--active") &&
+      style.classList.contains("form3__element--classic")
+    ) {
+      pdfContainer.classList.add("pdf-container--classic");
+    }
+  });
+
+  dataArray.forEach(function (mainContentPDF) {
+    const mainDiv = document.createElement("div"); //dla każej struktury zrób div
     //console.log(mainContentPDF);
     mainDiv.classList.add(`pdf-container__element--${mainContentPDF[0]}`); //dodaj mu klasę i ma sie nazywać jak pierwszy element tablicy ( dodałem w pliku nextForm.js nazwy)
     //console.log(mainDiv);
     mainContentPDF.shift(); // po dodaniu klasy usuń ten element żeby nie dodało się jako "p"
 
-    mainContentPDF.forEach(function(elementValue){
-      const element = document.createElement("p"); 
-      element.classList.add("pdf-container__text")
-      element.textContent = elementValue; // dodaj do "p" dany element z tablicy 
+    mainContentPDF.forEach(function (elementValue) {
+      const element = document.createElement("p");
+      element.classList.add("pdf-container__text");
+      element.textContent = elementValue; // dodaj do "p" dany element z tablicy
       mainDiv.appendChild(element); // dodaj element do tego danego diva
-    })
+    });
 
     pdfContainer.appendChild(mainDiv);
   });
 
-  const pdfImage = document.querySelector('.imageInput__img');
-  
+  const pdfImage = document.querySelector(".imageInput__img");
 
-  pdfContainer.appendChild(pdfImage); // zdjęcie 
+  pdfContainer.appendChild(pdfImage); // zdjęcie
   console.log(pdfContainer);
-
 });
-
-
