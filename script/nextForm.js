@@ -16,7 +16,7 @@ const progressDots = document.querySelectorAll(".progress-container__dots");
 const form1Required = document.querySelectorAll(".form__input--required");
 let formInputs1;
 //VALUES
-let formValues1 = ["form1"];
+let formValues1 = [];
 let jobsValues = ["job"];
 let schoolValues = ["school"];
 let langsValues = ["langs"];
@@ -50,7 +50,9 @@ form1Required.forEach((input) => {
         formInputs1.forEach((input) => {
           formValues1.push(input.value);
         });
-        //console.log(formValues1);
+        
+        formValues1.unshift("form1");
+
         //FORM SWITCH
         form1.classList.add("form--unactive");
         form2.classList.remove("experience--unactive");
@@ -58,6 +60,8 @@ form1Required.forEach((input) => {
     } else {
       submitBtn1.classList.add("form__input--button--unactive");
     }
+
+    
   });
 });
 
@@ -204,3 +208,5 @@ function barChange() {
     });
   }
 }
+
+

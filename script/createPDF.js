@@ -11,11 +11,10 @@ styleDivs.forEach((div) => {
     }
   });
 });
-//głowna tablica z wszytskimi danymi 
-const dataArray = [formValues1, jobsValues, schoolValues, langsValues, skillsValues, hobbiesValues];
-
 
 submitBtn2.addEventListener("click", () => {
+  //głowna tablica z wszytskimi danymi 
+  const dataArray = [jobsValues, schoolValues, langsValues, skillsValues, hobbiesValues, formValues1];
   const pdfContainer = document.createElement("div");
   pdfContainer.classList.add("pdf-container");
   //console.log(dataArray[0]);
