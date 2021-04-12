@@ -17,11 +17,11 @@ const form1Required = document.querySelectorAll(".form__input--required");
 let formInputs1;
 //VALUES
 let formValues1 = [];
-let jobsValues = ["job"];
-let schoolValues = ["school"];
-let langsValues = ["langs"];
-let skillsValues = ["skills"];
-let hobbiesValues = ["hobbies"];
+let jobsValues = ["job", "Doświadczenie zawodowe"];
+let schoolValues = ["school", "Szkoła/Uczelnia"];
+let langsValues = ["langs", "Języki obce"];
+let skillsValues = ["skills", "Umiejętności"];
+let hobbiesValues = ["hobbies", "Zainteresowania"];
 //sprawdzenie czy wymagane pola sa wypelnione
 form1Required.forEach((input) => {
   input.addEventListener("input", () => {
@@ -50,7 +50,7 @@ form1Required.forEach((input) => {
         formInputs1.forEach((input) => {
           formValues1.push(input.value);
         });
-        
+        formValues1.unshift("Dane osobowe");
         formValues1.unshift("form1");
 
         //FORM SWITCH
