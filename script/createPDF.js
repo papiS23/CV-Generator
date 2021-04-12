@@ -13,7 +13,7 @@ styleDivs.forEach((div) => {
   });
 });
 
-submitBtn2.addEventListener("click", () => {
+form3Btn.addEventListener("click", () => {
   //głowna tablica z wszytskimi danymi
   const dataArray = [
     jobsValues,
@@ -26,6 +26,25 @@ submitBtn2.addEventListener("click", () => {
   const pdfContainer = document.createElement("div");
   pdfContainer.classList.add("pdf-container");
   //console.log(dataArray[0]);
+
+  styleDivs.forEach((style) => {
+    if (
+      style.classList.contains("form3__element--active") &&
+      style.classList.contains("form3__element--student")
+    ) {
+      pdfContainer.classList.add("pdf-container--student");
+    } else if (
+      style.classList.contains("form3__element--active") &&
+      style.classList.contains("form3__element--bussines")
+    ) {
+      pdfContainer.classList.add("pdf-container--bussines");
+    } else if (
+      style.classList.contains("form3__element--active") &&
+      style.classList.contains("form3__element--classic")
+    ) {
+      pdfContainer.classList.add("pdf-container--classic");
+    }
+  });
 
   dataArray.forEach(function (mainContentPDF) {
     console.log(mainContentPDF.length);
@@ -54,8 +73,7 @@ submitBtn2.addEventListener("click", () => {
 
   const pdfImage = document.querySelector(".imageInput__img");
   pdfContainer.appendChild(pdfImage); // zdjęcie
-  pdfContainer.style.zIndex = "1000";
   console.log(pdfContainer);
-  const container = document.querySelector(".container");
-  container.appendChild(pdfContainer);
+  const body = document.querySelector("body");
+  body.appendChild(pdfContainer);
 });
