@@ -15,10 +15,17 @@ $green-color: #61EDAA;
 
 .container{
     width: 100vw;
+    height: fit-content;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #fff;
+}
+.pdf-container{
+    position: absolute;
+    z-index: -1000;
+    top: 0;
 }
 .progress-container{
     width: 30%;
@@ -26,6 +33,7 @@ $green-color: #61EDAA;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
     &__bar{
         width: 95%;
         margin: auto;
@@ -113,7 +121,7 @@ $green-color: #61EDAA;
     "number button button"
     ;
     column-gap: 3%;
-
+    z-index: 3;
     &__label{
         display: flex;
         width: 100%;
@@ -200,6 +208,7 @@ $green-color: #61EDAA;
     border: solid 1px $green-color;
     display: flex;
     flex-direction: column;
+    z-index: 3;
 
     &__img{
         width: auto;
@@ -245,6 +254,8 @@ $green-color: #61EDAA;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
+
     &--unactive{
         display: none;
     }
@@ -373,6 +384,8 @@ $green-color: #61EDAA;
     padding: 2%;
     border-radius: 10px;
     background-color: $green-color;
+    z-index: 3;
+
 
     &__button{
         border: solid 1px $border-color;
@@ -390,6 +403,8 @@ $green-color: #61EDAA;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
+
     &__title{
         height: 20%;
         display: flex;
@@ -415,6 +430,19 @@ $green-color: #61EDAA;
         padding: 2% 5%;
         &--active{
             border: #61EDAA 1px solid;
+        }
+    }
+    &__submit{
+        width: 20%;
+        font-size: 18px;
+        background-color: $main-color;
+        padding: 2% 5%;
+        color: $form-bgc;
+        border: none;
+        margin-bottom: 5%;
+        overflow: hidden;
+        &:focus{
+            outline: none;
         }
     }
 

@@ -1,6 +1,6 @@
 .bg-dots {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 
 .bg-dots--1 {
@@ -24,10 +24,18 @@
 
 .container {
   width: 100vw;
+  height: fit-content;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
+}
+
+.pdf-container {
+  position: absolute;
+  z-index: -1000;
+  top: 0;
 }
 
 .progress-container {
@@ -36,6 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
 }
 
 .progress-container__bar {
@@ -129,6 +138,7 @@
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas: "photo name name" "photo secname secname" "photo email email" "adress city post" "number button button";
   column-gap: 3%;
+  z-index: 3;
 }
 
 .form__label {
@@ -225,6 +235,7 @@
   border: solid 1px #61EDAA;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 
 .imageInput__img {
@@ -270,6 +281,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
 }
 
 .experience--unactive {
@@ -387,6 +399,7 @@
   padding: 2%;
   border-radius: 10px;
   background-color: #61EDAA;
+  z-index: 3;
 }
 
 .element__button {
@@ -405,6 +418,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
 }
 
 .form3__title {
@@ -437,5 +451,20 @@
 
 .form3__element--active {
   border: #61EDAA 1px solid;
+}
+
+.form3__submit {
+  width: 20%;
+  font-size: 18px;
+  background-color: #118ab2;
+  padding: 2% 5%;
+  color: #f3f3f3;
+  border: none;
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+
+.form3__submit:focus {
+  outline: none;
 }
 /*# sourceMappingURL=form.css.map */
