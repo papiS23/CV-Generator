@@ -14,6 +14,13 @@
   left: -400px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .pdf-container {
   width: 794px;
   min-height: 1122px;
@@ -24,7 +31,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .pdf-container__element {
@@ -44,6 +50,7 @@
   padding-bottom: 1%;
   margin-bottom: 3%;
   border-bottom: 1px solid #777777;
+  font-family: 'Oswald', sans-serif;
 }
 
 .pdf-container__text {
