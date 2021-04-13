@@ -65,13 +65,15 @@ function createBar(i) {
     console.log("Nie działa");
   }
   // wypisanie zawartości zmiennych do tekstu
-  text.innerText = `${professionValue == "" ? "" : professionValue} ${
-    companyValue == "" ? "" : "," + companyValue
-  } ${cityValue == "" ? "" : "- " + cityValue} ${
-    selectValue == "" ? "" : "," + selectValue
-  } ${startValue == "" ? "" : startValue} ${endValue == "" ? "" : endValue}`;
+  text.innerText = `${professionValue == "" ? "" : professionValue + " "}${
+    companyValue == "" ? "" : "," + companyValue + " "
+  }${cityValue == "" ? "" : "- " + cityValue + " "}${
+    selectValue == "" ? "" : "," + selectValue + " "
+  }${startValue == "" ? "" : startValue + " "}${
+    endValue == "" ? "" : endValue + " "
+  }`;
 
-  if (text.innerText == "     ") {
+  if (text.innerText == "") {
   } else {
     //dodanie text i delBtn do tego zielonego elementu
     element.appendChild(text);
