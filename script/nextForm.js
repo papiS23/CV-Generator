@@ -50,8 +50,6 @@ form1Required.forEach((input) => {
         formInputs1.forEach((input) => {
           formValues1.push(input.value);
         });
-        formValues1.unshift("Dane osobowe");
-        formValues1.unshift("form1");
 
         //FORM SWITCH
         form1.classList.add("form--unactive");
@@ -60,8 +58,6 @@ form1Required.forEach((input) => {
     } else {
       submitBtn1.classList.add("form__input--button--unactive");
     }
-
-    
   });
 });
 
@@ -208,5 +204,3 @@ function barChange() {
     });
   }
 }
-
-
