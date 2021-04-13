@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pdf-container {
+  width: 794px;
+  min-height: 1122px;
+  position: absolute;
+  z-index: -1000;
+  top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-container__element {
+  width: 100%;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.pdf-container__element--form1 {
+  padding-left: 27%;
+  margin-top: 8%;
+  margin-bottom: 15%;
+}
+
+.pdf-container__title {
+  padding-bottom: 1%;
+  margin-bottom: 3%;
+  border-bottom: 1px solid #777777;
+  font-family: 'Oswald', sans-serif;
+}
+
+.pdf-container__text {
+  margin-top: 1%;
+}
+
+.pdf-container__img {
+  position: absolute;
+  width: 140px;
+  height: 180px;
+  top: 6%;
+  left: 5%;
+}
+/*# sourceMappingURL=pdf.css.map */

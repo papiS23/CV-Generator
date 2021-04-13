@@ -14,14 +14,7 @@ const form2 = document.querySelector(".experience");
 const form3 = document.querySelector(".form3");
 const progressDots = document.querySelectorAll(".progress-container__dots");
 const form1Required = document.querySelectorAll(".form__input--required");
-let formInputs1;
-//VALUES
-let formValues1 = [];
-let jobsValues = ["job", "Doświadczenie zawodowe"];
-let schoolValues = ["school", "Szkoła/Uczelnia"];
-let langsValues = ["langs", "Języki obce"];
-let skillsValues = ["skills", "Umiejętności"];
-let hobbiesValues = ["hobbies", "Zainteresowania"];
+
 //sprawdzenie czy wymagane pola sa wypelnione
 form1Required.forEach((input) => {
   input.addEventListener("input", () => {
@@ -44,15 +37,6 @@ form1Required.forEach((input) => {
           iconColor = progressIcon2.childNodes[0].childNodes[0];
           iconColor.setAttribute("fill", "#ffffff");
         });
-        //FORM 1 VALUES
-        formInputs1 = document.querySelectorAll(".form__input--values");
-        formValues1 = [];
-        formInputs1.forEach((input) => {
-          formValues1.push(input.value);
-        });
-        formValues1.unshift("Dane osobowe");
-        formValues1.unshift("form1");
-
         //FORM SWITCH
         form1.classList.add("form--unactive");
         form2.classList.remove("experience--unactive");
@@ -60,8 +44,6 @@ form1Required.forEach((input) => {
     } else {
       submitBtn1.classList.add("form__input--button--unactive");
     }
-
-    
   });
 });
 
@@ -77,27 +59,6 @@ submitBtn2.addEventListener("click", (e) => {
     progressDot3.style = "background-color: #0581aa";
     iconColor3 = progressIcon3.childNodes[0].childNodes[0];
     iconColor3.setAttribute("fill", "#ffffff");
-  });
-  //FORM 2 VALUES
-  const jobs = document.querySelectorAll(".element__text--job");
-  jobs.forEach((job) => {
-    jobsValues.push(job.innerText);
-  });
-  const school = document.querySelectorAll(".element__text--school");
-  school.forEach((schoool) => {
-    schoolValues.push(schoool.innerText);
-  });
-  const langs = document.querySelectorAll(".element__text--lang");
-  langs.forEach((lang) => {
-    langsValues.push(lang.innerText);
-  });
-  const skills = document.querySelectorAll(".element__text--skill");
-  skills.forEach((skill) => {
-    skillsValues.push(skill.innerText);
-  });
-  const hobbies = document.querySelectorAll(".element__text--hobby");
-  hobbies.forEach((hobby) => {
-    hobbiesValues.push(hobby.innerText);
   });
   //FORM SWITCH
   form1.classList.add("form--unactive");
@@ -149,12 +110,6 @@ function barChange() {
       iconColor3 = progressIcon3.childNodes[0].childNodes[0];
       iconColor3.setAttribute("fill", "#000000");
     });
-    //ponowne zapisanie wartosci z pierwszego forma
-    formValues1 = [];
-    formInputs1 = document.querySelectorAll(".form__input--values");
-    formInputs1.forEach((input) => {
-      formValues1.push(input.value);
-    });
   } else if (this.classList.contains("progress-container__dots--3")) {
     form1.classList.add("form--unactive");
     form2.classList.add("experience--unactive");
@@ -173,40 +128,5 @@ function barChange() {
       iconColor = progressIcon2.childNodes[0].childNodes[0];
       iconColor.setAttribute("fill", "#ffffff");
     });
-    //ponowne zapisanie wartosci z pierwszego i drugiego forma
-    //1
-    formValues1 = [];
-    formInputs1 = document.querySelectorAll(".form__input--values");
-    formInputs1.forEach((input) => {
-      formValues1.push(input.value);
-    });
-    //2
-    jobsValues = [];
-    schoolValues = [];
-    langsValues = [];
-    skillsValues = [];
-    hobbiesValues = [];
-    const jobs = document.querySelectorAll(".element__text--job");
-    jobs.forEach((job) => {
-      jobsValues.push(job.innerText);
-    });
-    const school = document.querySelectorAll(".element__text--school");
-    school.forEach((schoool) => {
-      schoolValues.push(schoool.innerText);
-    });
-    const langs = document.querySelectorAll(".element__text--lang");
-    langs.forEach((lang) => {
-      langsValues.push(lang.innerText);
-    });
-    const skills = document.querySelectorAll(".element__text--skill");
-    skills.forEach((skill) => {
-      skillsValues.push(skill.innerText);
-    });
-    const hobbies = document.querySelectorAll(".element__text--hobby");
-    hobbies.forEach((hobby) => {
-      hobbiesValues.push(hobby.innerText);
-    });
   }
 }
-
-

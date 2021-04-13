@@ -1,4 +1,5 @@
 @import './components/dots';
+@import './components/pdf';
 
 *{
     margin: 0;
@@ -21,11 +22,6 @@ $green-color: #61EDAA;
     flex-direction: column;
     align-items: center;
     background: #fff;
-}
-.pdf-container{
-    position: absolute;
-    z-index: -1000;
-    top: 0;
 }
 .progress-container{
     width: 30%;
