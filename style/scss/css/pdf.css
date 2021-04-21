@@ -10,7 +10,7 @@
   min-height: 1122px;
   position: absolute;
   z-index: -1000;
-  top: 0;
+  top: -9999px;
   position: relative;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 .bg-dots {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
 .bg-dots--1 {
@@ -80,7 +80,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
 }
 
 .progress-container {
